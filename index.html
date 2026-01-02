@@ -1,0 +1,27 @@
+import random
+
+sayi = random.randint(1, 10)
+hak = 3
+
+print("🎮 Sayı Tahmin Oyununa Hoş Geldin!")
+print("1 ile 10 arasında bir sayı tuttum.")
+print("3 hakkın var.\n")
+
+while hak > 0:
+    tahmin = int(input("Tahminini gir: "))
+    hak -= 1
+
+    if tahmin == sayi:
+        print("🎉 Tebrikler! Doğru bildin!")
+        break
+    elif tahmin > sayi:
+        print("⬇️ Daha küçük bir sayı dene.")
+    else:
+        print("⬆️ Daha büyük bir sayı dene.")
+
+    print("Kalan hak:", hak)
+    print()
+
+if hak == 0:
+    print("😢 Oyun bitti.")
+    print("Doğru sayı:", sayi)
